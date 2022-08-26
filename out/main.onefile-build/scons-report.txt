@@ -1,10 +1,10 @@
 AS=as
 CC="C:\Users\UknownPerson\AppData\Local\Nuitka\Nuitka\ccache\v4.6\ccache.exe" "C:\Users\UknownPerson\AppData\Local\Nuitka\Nuitka\gcc\x86_64\11.3.0-14.0.3-10.0.0-msvcrt-r3\mingw64\bin\gcc.exe"
 CCACHE_DIR=C:\Users\UKNOWN~1\AppData\Local\Nuitka\Nuitka\Cache\ccache
-CCACHE_LOGFILE=D:\Code\pytoolbox\out\main.onefile-build\ccache-15668.txt
+CCACHE_LOGFILE=D:\Code\pytoolbox\out\main.onefile-build\ccache-9704.txt
 CCCOM=$CC -o $TARGET -c $CFLAGS $CCFLAGS $_CCCOMCOM $SOURCES
 CFILESUFFIX=.c
-CPPDEFINES=['_WIN32_WINNT=0x0501', '__NUITKA_NO_ASSERT__', '_NUITKA_WINMAIN_ENTRY_POINT', '_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED=1']
+CPPDEFINES=['_WIN32_WINNT=0x0501', '__NUITKA_NO_ASSERT__', '_NUITKA_PLUGIN_MULTIPROCESSING_ENABLED=1']
 CPPDEFPREFIX=-D
 CPPDEFSUFFIX=
 CPPPATH=['.', 'D:\\Code\\pytoolbox\\venv\\lib\\site-packages\\nuitka\\build\\include', 'D:\\Code\\pytoolbox\\venv\\lib\\site-packages\\nuitka\\build\\static_src', 'D:\\Code\\pytoolbox\\venv\\lib\\site-packages\\nuitka\\build\\inline_copy\\zstd']
