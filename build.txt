@@ -3,3 +3,5 @@ pyinstaller -F main.py
 python -m nuitka main.py
 nuitka --standalone --show-progress --show-memory --enable-plugin=tk-inter --onefile --output-dir=out --nofollow-imports --windows-icon-from-ico=logo.ico main.py
 nuitka --standalone --show-progress --show-memory --enable-plugin=tk-inter --onefile --output-dir=out --nofollow-imports --windows-icon-from-ico=logo.ico --windows-disable-console main.py
+
+https://www.cnblogs.com/leoych/p/14446354.html

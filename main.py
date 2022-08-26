@@ -86,7 +86,6 @@ window_geometry = window_width + "x" + window_height  # 窗口_形状
 # 函数
 
 # CPU名称
-
 class cpu_name(Thread):
 
     def __init__(self, text):
@@ -97,11 +96,19 @@ class cpu_name(Thread):
         Time_Start1 = time()
         import wmi
         Cpu_Info = wmi.WMI()
+        name = ""
         for cpu in Cpu_Info.Win32_Processor():
-            print_log("线程1_结果_CPU名称: " + cpu.name, "信息")
+            name = cpu.name
+        print_log("线程1_结果_CPU名称: " + name, "信息")
+        l.insert(0, name)
         Time_End1 = time()
         print_log(self.text + ": " + str((Time_End1 - Time_Start1) * 1000) + "ms", "信息")
 
+
+# 初始化
+print_log("主线程_线程1_运行_启动", "信息")
+thread_1 = cpu_name("线程1_运行_耗时", )
+thread_1.start()
 
 # 初始窗口
 print_log("主线程_窗口_初始化_启动", "信息")
@@ -123,10 +130,8 @@ os.remove('icon.ico')
 Time_End3 = time()
 print_log("主线程_窗口_设置图标_耗时: " + str((Time_End3 - Time_Start3) * 1000) + "ms", "信息")
 
-# 初始化
-print_log("主线程_线程1_运行_启动", "信息")
-thread_1 = cpu_name("线程1_运行_耗时", )
-thread_1.start()
+l = Listbox(window)
+l.pack()
 
 # 显示窗口
 Time_End = time()
