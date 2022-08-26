@@ -1,4 +1,5 @@
 import base64
+import psutil
 import os
 from threading import *
 from tkinter import *
@@ -99,8 +100,9 @@ class cpu_name(Thread):
         name = ""
         for cpu in Cpu_Info.Win32_Processor():
             name = cpu.name
+        name = name.rstrip()
         print_log("线程1_结果_CPU名称: " + name, "信息")
-        l.insert(0, name)
+        l.insert(0, name + "    " + str(psutil.cpu_count(False)) + " Core")
         Time_End1 = time()
         print_log(self.text + ": " + str((Time_End1 - Time_Start1) * 1000) + "ms", "信息")
 
@@ -130,7 +132,7 @@ os.remove('icon.ico')
 Time_End3 = time()
 print_log("主线程_窗口_设置图标_耗时: " + str((Time_End3 - Time_Start3) * 1000) + "ms", "信息")
 
-l = Listbox(window)
+l = Listbox(window, width="100")
 l.pack()
 
 # 显示窗口
